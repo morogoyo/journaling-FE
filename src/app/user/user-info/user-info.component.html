@@ -1,0 +1,176 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            User Information
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <ion-item>
+                        <ion-label>
+                            <label for="firstName">First Name</label>
+                        </ion-label>
+                        <input type="text" class="form-control" id="firstName" formControlName="fname">
+                    </ion-item>
+                </div>
+                <div class="form-group col-md-4">
+                    <ion-item>
+                        <ion-label>
+                            <label for="lastName">Last Name</label>
+                        </ion-label>
+                        <input type="text" class="form-control" id="lastName" formControlName="lname">
+                    </ion-item>
+                </div>
+                <div class="form-group col-md-4">
+                  <ion-item>
+                    <ion-label>
+                    <label for="inputEmail4">Email</label>
+                    </ion-label>
+                    <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+                  </ion-item>
+                </div>
+                <div class="form-group col-md-4">
+                  <ion-item>
+                    <ion-label>
+                    <label for="inputPassword4">Password</label>
+                    </ion-label>
+                    <input type="password" class="form-control" id="inputPassword4" formControlName="password">
+                  </ion-item>
+                </div>
+            </div>
+            <div class="form-group">
+              <ion-item>
+                <ion-label>
+                <label for="inputAddress">Address</label>
+                </ion-label>
+                <input type="text" class="form-control" id="inputAddress" formControlName="streetAddress">
+
+                  </ion-item>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <ion-item>
+                    <ion-label>
+                    <label for="inputCity">City</label>
+                    </ion-label>
+
+                    <input type="text" class="form-control" id="inputCity" formControlName="city">
+                  </ion-item>
+                </div>
+                <div class="form-group col-md-4">
+                  <ion-item>
+                    <ion-label>
+                    <label for="inputState">State</label>
+                    </ion-label>
+                    <select id="inputState" class="form-control" formControlName="state">
+                        <option selected>Choose...</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                  </ion-item>
+                </div>
+                <div class="form-group col-md-3">
+                  <ion-item>
+                    <ion-label>
+                    <label for="inputZip">Zip</label>
+                      </ion-label>
+                    <input type="text" class="form-control" id="inputZip" formControlName="zipcode">
+                    </ion-item>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group col-md-6">
+                  <ion-item>
+                    <ion-label>
+                    <label for="dob">Date of Birth</label>
+                    </ion-label>
+                    <input type="date" class="form-control" id="dob" formControlName="dateOfBirth">
+                  </ion-item>
+                </div>
+                <div class="form-check">
+                  <ion-item>
+                    <ion-label>
+                    <label class="form-check-label" for="inputGender">Gender</label>
+                    </ion-label>
+                    <select id="inputGender" class="form-control" formControlName="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                  </ion-item>
+                </div>
+                <div class="form-check">
+                  <ion-item>
+                    <ion-label>
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    </ion-label>
+                    <label class="form-check-label" for="gridCheck">
+                        I accept all Rules and Regulations
+                    </label>
+                  </ion-item>
+                </div>
+            </div>
+            <ion-item>
+            <button  class="btn btn-primary" (click)="onSubmit()">Sign in</button>
+                </ion-item>
+        </form>
+    </div>
+    <div class="col-md-3">{{registrationForm.value |json}}</div>
+</div>
