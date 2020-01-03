@@ -5,12 +5,14 @@ import {IonicModule} from '@ionic/angular';
 import {RouterModule} from '@angular/router';
 import {SettingsComponent} from './settings/settings.component';
 import {UserInfoComponent} from './user-info/user-info.component';
+import {LoginComponent} from './login/login.component';
 
 
 @NgModule({
     declarations: [
         UserInfoComponent,
-        SettingsComponent
+        SettingsComponent,
+        LoginComponent
     ],
     imports: [
 
@@ -25,9 +27,12 @@ import {UserInfoComponent} from './user-info/user-info.component';
             }, {
                 path: 'user-info',
                 component: UserInfoComponent
-            },{
+            }, {
                 path: 'settings',
                 component: SettingsComponent
+            }, {
+                path: 'login',
+                component: LoginComponent
             }
         ])
 

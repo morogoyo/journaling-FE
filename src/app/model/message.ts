@@ -1,4 +1,5 @@
 export interface Message {
-    date: 'date';
+    date: string;
+    message: string;
 
 }
