@@ -29,7 +29,8 @@ export class UserInfoComponent implements OnInit {
 
   onSubmit() {
     // console.warn(this.registrationForm.value);
-    this.httpService.addUserInfo(this.registrationForm.value).subscribe(d => console.log('Created User'));
+    this.httpService.addUserInfo(this.registrationForm.value).subscribe(d => console.log('Created User'),
+                                                                    error => { console.log(error); });
   }
 
   ngOnInit() {
